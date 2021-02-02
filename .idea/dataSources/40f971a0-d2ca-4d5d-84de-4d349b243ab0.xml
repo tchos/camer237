@@ -1385,7 +1385,7 @@ false posixrules
     <database id="2" parent="1" name="camer237">
       <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>499</IntrospectionStateNumber>
+      <IntrospectionStateNumber>504</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -1461,7 +1461,7 @@ UC/10
 </Acl>
       <StateNumber>275</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>500</IntrospectionStateNumber>
+      <IntrospectionStateNumber>505</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <sequence id="18" parent="17" name="user_id_seq">
@@ -1478,7 +1478,7 @@ UC/10
     <table id="20" parent="17" name="user">
       <ObjectId>16393</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>498</StateNumber>
+      <StateNumber>501</StateNumber>
     </table>
     <column id="21" parent="19" name="version">
       <Position>1</Position>
@@ -1546,7 +1546,21 @@ UC/10
       <StateNumber>498</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="30" parent="20" name="user_pkey">
+    <column id="30" parent="20" name="firstname">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>501</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="31" parent="20" name="lastname">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>501</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="32" parent="20" name="user_pkey">
       <ObjectId>16399</ObjectId>
       <StateNumber>498</StateNumber>
       <ColNames>id</ColNames>
@@ -1556,7 +1570,7 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <index id="31" parent="20" name="uniq_8d93d649e7927c74">
+    <index id="33" parent="20" name="uniq_8d93d649e7927c74">
       <ObjectId>16401</ObjectId>
       <StateNumber>498</StateNumber>
       <ColNames>email</ColNames>
@@ -1566,7 +1580,7 @@ UC/10
       <CollationNames>default</CollationNames>
       <ClassIds>3126</ClassIds>
     </index>
-    <key id="32" parent="20" name="user_pkey">
+    <key id="34" parent="20" name="user_pkey">
       <ObjectId>16400</ObjectId>
       <StateNumber>498</StateNumber>
       <ColNames>id</ColNames>
