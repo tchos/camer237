@@ -2,14 +2,17 @@
 
 namespace App\Classe;
 
+use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class Cart
 {
     private $session;
-    public function __construct(SessionInterface $session)
+    private $repo;
+    public function __construct(SessionInterface $session, ProductRepository $repo)
     {
         $this->session = $session;
+        $this->repo = $repo;
     }
 
     // Ajouter une carte à ma session
@@ -24,7 +27,7 @@ class Cart
         } else {
             $cart[$id] = 1;
         }
-        // session->add('...') ajoute un élt à la session
+        // session->set('...') met à jour un élt à la session
         $this->session->set('cart', $cart);
     }
 
@@ -40,5 +43,63 @@ class Cart
     {
         //session->remove('cart') supprime l'element 'cart' de la session 
         return $this->session->remove('cart');
+    }
+
+    /* Fonction pour enlever un produit du panier */
+    public function delete($id)
+    {
+        // On recupère le panier de la session qui est en effet un tableau
+        $cart = $this->session->get('cart', []);
+
+        // On supprime l'entrée du tableau contenant le produit en question
+        unset($cart[$id]);
+
+        // session->set('...') met à jour l'élt 'cart' qui est dans la session
+        return $this->session->set('cart', $cart);
+    }
+
+    /** Fonction pour diminuer la quantité d'un produit dans le panier */
+    public function decrease($id)
+    {
+        // On recupère le panier de la session qui est en effet un tableau
+        $cart = $this->session->get('cart', []);
+
+        /**On vérifie que la quantité en panier est supérieure à 1 
+            sinon on supprime simpliement le produit du panier */
+        if ($cart[$id] > 1) {
+            // on diminue la quantité
+            $cart[$id]--;
+        } else {
+            // on retire le produit du panier
+            unset($cart[$id]);
+        }
+
+        // session->set('...') met à jour l'élt 'cart' qui est dans la session
+        return $this->session->set('cart', $cart);
+    }
+
+    /** Fonction pour récupérer une carte complète: produit et quantité */
+    public function getFull()
+    {
+        $cartComplete = [];
+
+        // On vérifie qu'il y a un produit dans le panier avant de le transmettre
+        if ($this->get()) {
+            foreach ($this->get() as $id => $quantity) {
+                $product = $this->repo->findOneById($id);
+
+                if (!$product) {
+                    $this->delete($id);
+                    continue;
+                }
+
+                $cartComplete[] = [
+                    'product' => $product,
+                    'quantity' => $quantity
+                ];
+            }
+        }
+
+        return $cartComplete;
     }
 }

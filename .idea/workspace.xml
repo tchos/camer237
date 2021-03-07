@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27e0a27e-cf7c-4792-ad80-8370276428b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/css/camer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/camer237.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/camer237.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40f971a0-d2ca-4d5d-84de-4d349b243ab0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/40f971a0-d2ca-4d5d-84de-4d349b243ab0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40f971a0-d2ca-4d5d-84de-4d349b243ab0/storage_v2/_src_/database/camer237.2uMU9w/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/40f971a0-d2ca-4d5d-84de-4d349b243ab0/storage_v2/_src_/database/camer237.2uMU9w/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegisterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegisterType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +166,7 @@
       <workItem from="1610280917871" duration="8802000" />
       <workItem from="1610397273171" duration="3614000" />
       <workItem from="1610996469885" duration="6093000" />
-      <workItem from="1611490740984" duration="12513000" />
+      <workItem from="1611490740984" duration="14161000" />
     </task>
     <servers />
   </component>
