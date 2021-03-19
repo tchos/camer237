@@ -18,7 +18,8 @@ class RegisterController extends AbstractController
 {
     private $entityManager;
 
-    public function __construct(EntityManagerInterface $entityManager){
+    public function __construct(EntityManagerInterface $entityManager)
+    {
         $this->entityManager = $entityManager;
     }
     /**
@@ -32,7 +33,7 @@ class RegisterController extends AbstractController
         $form->handleRequest($request);
 
         //Soumission et validation du formulaire d'inscription
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
 
             //On encode le password
@@ -44,7 +45,7 @@ class RegisterController extends AbstractController
             $this->entityManager->flush();
         }
 
-        return $this->render('register/password.html.twig', [
+        return $this->render('register/index.html.twig', [
             'form' => $form->createView(),
         ]);
     }
