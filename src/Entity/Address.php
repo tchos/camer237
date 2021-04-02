@@ -97,6 +97,10 @@ class Address
         return $this;
     }
 
+    public function __toString(){
+        return $this->getName().'[br]'.$this->getAddress().'[br]'.$this->getCity().'-'.$this->getCountry();
+    }
+
     public function getLastname(): ?string
     {
         return $this->lastname;
